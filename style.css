@@ -1,0 +1,330 @@
+*{
+    /* A universal CSS reset */
+    margin:0;
+    padding:0;
+}
+
+
+@font-face {
+    font-family: 'Comix';
+    src : url('polices/comix_loud/Comix Loud.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'edo';
+    src : url('polices/Edo/edo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mangatemple';
+    src : url('polices/manga_temple/mangatb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gbshinto';
+    src : url('polices/GB_Shinto/GBShinto-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF_comic_script';
+    src : url('polices/sf_comic_script/SF Comic Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*element principaux*/
+body {
+    background-color: #9b0000;
+    height: 100%;
+}
+
+#container {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width:790px; 
+    margin:0 auto;
+    margin-top: -1px;
+    background-color: white;
+    border: solid 1px #9b0000;
+    height: 100%;
+
+    /* Shadow */
+    -moz-box-shadow: inset 0 0 3px 3px #888;
+    -webkit-box-shadow: inset 0 0 3px 3px #888;
+    box-shadow: inset 0 0 3px 3px #888;
+
+}
+
+h1,h2, #menu span {
+   font-family:'edo','Myriad Pro',Arial, Helvetica, sans-serif; 
+}
+
+h1 {
+    font-size:33px;
+    letter-spacing:0.7px;
+    border-bottom: 10px;
+    margin-bottom:10px;
+}
+
+/*titre pr les infobulles*/
+h2{
+    font-size: 15px;
+    letter-spacing: 0.13em;
+    background: black;
+    margin-bottom: 0.5em;
+}
+
+
+/* header : logo + menu */ 
+
+header {
+    width:790px;
+    height : 80px;
+    position: fixed;
+    background: white;
+    z-index: 15;
+    /* Shadow */
+    -moz-box-shadow: inset 0 0 3px 3px #888;
+    -webkit-box-shadow: inset 0 0 3px 3px #888;
+    box-shadow: inset 0 0 3px 3px #888;
+/*    border: solid 1px red; */
+}
+
+#logo {
+    background-image: url("images/kawaiie.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width:210px;
+    height:65px; 
+    display:block; 
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 8px;
+}
+
+#menu {
+    margin-left : 290px;
+    margin-top: -42px;/*alignement avec le logo*/
+    margin-bottom:20px;
+/*    right: 0;*/
+/*    border: solid 1px red;*/
+}
+
+#menu li {
+    display : inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    list-style:none;
+}
+
+#menu a {
+    text-decoration: none;/*pas de soulignement*/
+    color : black;
+}
+
+#menu span {
+    /* Container properties */
+    padding:0;
+    overflow:hidden;
+
+    /* Text properties */
+    font-size:25px;
+    letter-spacing:0.5px;
+    white-space:nowrap;*/
+    line-height:30px;   
+    
+    /* CSS3 Transition: */
+    -webkit-transition: 0.25s;
+    
+    /* Future proofing (these do not work yet): */
+    -moz-transition: 0.25s;
+    transition: 0.25s;
+}
+
+#menu a:hover span {
+    width:auto; 
+    padding:0 5px; 
+    overflow:visible;
+    color: #760001;
+/*    border-bottom: 2px solid #760001; /*largeur du trait et couleur*/
+}
+
+/* Barre de navigation */
+#navbar {
+    width:auto; 
+    height: 140px;
+    display:block; 
+    margin-top: 80px;
+    margin-bottom: 10px;
+    background: black;
+ /*   border: solid 1px red;*/
+}
+
+
+#navbar #kawaiie {
+    width:auto;
+    height:140px;
+    background-size: 12%,35%,31%,15%,24%;
+    background-image: url("images/navbar/home/transmetropolitan.jpg")
+    ,url("images/navbar/home/akumetsu.png"),url("images/navbar/home/death_note.jpg"),
+    url("images/navbar/home/vendetta.jpg"),url("images/navbar/home/gto.jpg");
+    background-position: 31% 50%,left top, 57% 50%,82% 20%,right top;
+    background-repeat: no-repeat, no-repeat;
+}
+
+#navbar #bibliotheque {
+    width:auto;
+    height:140px;
+    background-size: 50%;
+    background-image: url("images/navbar/bibli/mangas.png"), url("images/navbar/bibli/comics.png");
+    background-position: 4% 5%, 98% 3%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+#navbar #proj{
+    width:auto;
+    height:140px;
+    background-size: 52%;  
+    background-image: url("images/navbar/proj/film01.png"), url("images/navbar/proj/film02.png");
+    background-position: 4% 31%,97% 28%;
+    background-repeat: no-repeat;   
+}
+
+#main{
+    margin:0 auto;
+    display:block;
+    margin-bottom: 100px;
+}
+
+
+article{
+    margin: 0 auto;
+    width:692px;
+    margin-bottom:2.5em;
+}
+
+.bibli{
+    margin: 0 auto;
+    width:692px;
+}
+
+/*article .bibli{
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+}*/
+
+
+.bibli img {
+    /*width : 20%;*/
+    height : 7.6em;
+    margin-left:-10px;
+    
+    /* CSS3 Transition: */
+    -webkit-transition: 0.35s;
+    
+    /* Future proofing (these do not work yet): */
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+}
+
+
+/*le livre s'agrandit lorsque l'on passe dessus*/
+.bibli img:hover {
+    height : 8em;
+}
+
+/*Affiche de l'infobulle*/
+.bibli a{
+    display: inline-block;
+}
+
+.bibli a span{
+    position:absolute;
+    width:15em;
+    color:#09c;
+    background:rgba(0,0,0,.8);
+    padding:15px;
+    border-radius:3px;
+    box-shadow:0 0 2px rgba(0,0,0,.25);
+    display: none
+}
+
+.bibli a:hover span{
+    display: inline-block;
+}
+/*Fin affichage de l'infobulle*/
+
+
+footer {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 790px; 
+    margin: 0 auto;
+    margin left: 10px;
+    background-color: #cbcbcb;
+    padding-top: 25px;
+    margin-top: 5px;
+
+     /* Shadow */
+ /*   -moz-box-shadow: inset 0 0 3px 3px #c60000;
+    -webkit-box-shadow: inset 0 0 3px 3px #c60000;
+    box-shadow: inset 0 0 3px 3px #c60000;
+*/
+ }
+
+footer p, footer ul {
+    font-size: 0.8em;
+}
+
+footer li {
+    margin-left: 30px
+}
+
+footer h1 {
+    font-size: 1.1em;
+}
+
+#ensiie {
+    display: inline-block;
+    vertical-align: top;
+    width:20%;
+    margin-left:40px;
+    margin-bottom: 30px;
+/*    border:1px solid red;*/
+}
+
+#ensiie ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    list-style-image: url('images/ico_liensexterne.png');
+    padding-left: 2px;
+}
+
+#ensiie a {
+    text-decoration: none;
+    color: #760001;
+        /* CSS3 Transition: */
+    -webkit-transition: 0.25s;
+    
+    /* Future proofing (these do not work yet): */
+    -moz-transition: 0.25s;
+    transition: 0.25s;
+}
+
+
+#ensiie a:hover {
+    width:auto; 
+    padding:0 5px; 
+    overflow:visible;
+    color: #760001;
+}
