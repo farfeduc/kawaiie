@@ -1,10 +1,3 @@
-*{
-    /* A universal CSS reset */
-    margin:0;
-    padding:0;
-}
-
-
 @font-face {
     font-family: 'Comix';
     src : url('polices/comix_loud/Comix Loud.ttf') format('truetype');
@@ -49,9 +42,9 @@ body {
 #container {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    width:790px; 
+    max-width:790px; 
     margin:0 auto;
-    margin-top: -1px;
+    margin-top: -9px;
     background-color: white;
     border: solid 1px #9b0000;
     height: 100%;
@@ -84,7 +77,6 @@ h2{
 
 
 /* header : logo + menu */ 
-
 header {
     width:790px;
     height : 80px;
@@ -102,7 +94,8 @@ header {
     background-image: url("images/kawaiie.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    width:210px;
+    max-width:210px;
+    width:100%;
     height:65px; 
     display:block; 
     margin-left: 10px;
@@ -111,35 +104,49 @@ header {
 }
 
 #menu {
-    margin-left : 290px;
-    margin-top: -42px;/*alignement avec le logo*/
-    margin-bottom:20px;
-/*    right: 0;*/
-/*    border: solid 1px red;*/
+    width:auto;
+    text-align: center;
+    margin-left : 14em;
+    margin-top: -2.5em;/*alignement avec le logo*/
+    /*margin-bottom:2em;*/
+    /*border: solid 1px red;*/
 }
 
 #menu li {
     display : inline-block;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
     list-style:none;
 }
 
 #menu a {
     text-decoration: none;/*pas de soulignement*/
     color : black;
+    padding:0;
+    overflow: hidden;
+
+    white-space:nowrap;
+    line-height: 1.5em;
+
+    /* CSS3 Transition: */
+    -webkit-transition: 0.15s; 
+    -moz-transition: 0.15s;
+    transition: 0.15s;
+
 }
 
 #menu span {
     /* Container properties */
-    padding:0;
+    /*padding:0;*/
     overflow:hidden;
 
     /* Text properties */
     font-size:25px;
     letter-spacing:0.5px;
     white-space:nowrap;*/
-    line-height:30px;   
+    line-height:30px;
+
+    display: block;   
     
     /* CSS3 Transition: */
     -webkit-transition: 0.25s;
@@ -151,21 +158,24 @@ header {
 
 #menu a:hover span {
     width:auto; 
-    padding:0 5px; 
+    /*padding:0 5px;*/ 
     overflow:visible;
     color: #760001;
+
+    transform: scale(1.4);
+    -webkit-transform:scale(1.4);
 /*    border-bottom: 2px solid #760001; /*largeur du trait et couleur*/
 }
 
 /* Barre de navigation */
 #navbar {
     width:auto; 
-    height: 140px;
+    height: 8.75em;
     display:block; 
     margin-top: 80px;
     margin-bottom: 10px;
     background: black;
- /*   border: solid 1px red;*/
+    /*border: solid 1px red;*/
 }
 
 
@@ -173,8 +183,8 @@ header {
     width:auto;
     height:140px;
     background-size: 12%,35%,31%,15%,24%;
-    background-image: url("images/navbar/home/transmetropolitan.jpg")
-    ,url("images/navbar/home/akumetsu.png"),url("images/navbar/home/death_note.jpg"),
+    background-image: url("images/navbar/home/transmetropolitan.jpg"),
+    url("images/navbar/home/akumetsu.png"),url("images/navbar/home/death_note.jpg"),
     url("images/navbar/home/vendetta.jpg"),url("images/navbar/home/gto.jpg");
     background-position: 31% 50%,left top, 57% 50%,82% 20%,right top;
     background-repeat: no-repeat, no-repeat;
@@ -202,12 +212,15 @@ header {
     margin:0 auto;
     display:block;
     margin-bottom: 100px;
+
+    /*border: solid 1px white;*/
 }
 
 
 article{
     margin: 0 auto;
     width:692px;
+
     margin-bottom:2.5em;
 }
 
@@ -216,30 +229,23 @@ article{
     width:692px;
 }
 
-/*article .bibli{
-    margin-bottom: 30px;
-    margin-left: 10px;
-
-}*/
-
-
 .bibli img {
-    /*width : 20%;*/
     height : 7.6em;
     margin-left:-10px;
     
     /* CSS3 Transition: */
-    -webkit-transition: 0.35s;
+    -webkit-transition: 0.25s;
     
     /* Future proofing (these do not work yet): */
-    -moz-transition: 0.35s;
-    transition: 0.35s;
+    -moz-transition: 0.25s;
+    transition: all 0.25s linear;
 }
 
 
 /*le livre s'agrandit lorsque l'on passe dessus*/
-.bibli img:hover {
-    height : 8em;
+.bibli a:hover img{
+    transform: scale(2);
+    -webkit-transform:scale(2); 
 }
 
 /*Affiche de l'infobulle*/
@@ -249,12 +255,11 @@ article{
 
 .bibli a span{
     position:absolute;
-    width:15em;
-    color:#09c;
-    background:rgba(0,0,0,.8);
+    width:17em;
+    color:#EDD6C9;
+    background:rgba(0,0,0,.85);
     padding:15px;
-    border-radius:3px;
-    box-shadow:0 0 2px rgba(0,0,0,.25);
+    /*border-radius:1px;*/
     display: none
 }
 
